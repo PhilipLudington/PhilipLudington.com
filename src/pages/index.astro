@@ -1,24 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-const projects = [
+const featuredProjects = [
   {
-    name: 'ChangeSmith.dev',
+    name: 'Changesmith.dev',
     url: 'https://changesmith.dev',
     description:
       'Turn your git history into polished release notes. AI-powered changelog generation that analyzes commits, PRs, and issues to create documentation customers actually want to read.',
   },
   {
-    name: 'SheetSmith',
-    url: 'https://sheetsmith.dev',
+    name: 'MCPAtlas',
+    url: 'https://mcpatlas.dev',
     description:
-      'Your spreadsheet deserves to be an app. Upload your data, answer AI-guided questions, and get a custom web application with access controls, validation, and sharing — no code required.',
+      'Curated registry of Model Context Protocol servers. 52 servers indexed with quality scoring, installation manifests, and featured-listing monetization. Daily GitHub-driven metric updates.',
   },
   {
-    name: 'GameLegend.com',
-    url: 'https://gamelegend.com',
+    name: 'Klar',
+    url: 'https://github.com/PhilipLudington/Klar',
     description:
-      'The map to every game worth playing. Discover games through Gameplay DNA — 9 categories and 69 dimensions that go beyond genre labels to match you with games you\'ll actually love.',
+      'No ambiguity. No surprises. An AI-native programming language with its own compiler written in Zig. Every construct is self-describing, parseable at a glance, and has defined semantics.',
+  },
+  {
+    name: 'AgenticGameDevelopment',
+    url: 'https://agenticgamedevelopment.com',
+    description:
+      'Curated directory of 89+ AI tools for game development, organized by a 6-stage dev workflow — from AI art generators to AI NPCs, procedural generation, and launch tools.',
+  },
+  {
+    name: 'Deep Hollow',
+    url: 'https://deephallow.com',
+    description:
+      'Cooperative survival-strategy game where your AI partner runs your underground fortress 24/7. Next.js + Solana NFT item economy. Entered the Solana Agent Economy Hackathon.',
   },
   {
     name: 'MrPhilGames',
@@ -26,37 +38,74 @@ const projects = [
     description:
       'Indie game studio building Stellar Throne and Crimson Crisis. Blog exploring what happens when AI becomes your dev partner.',
   },
+]
+
+const moreProjects = [
   {
-    name: 'Klar',
-    url: 'https://github.com/PhilipLudington/Klar',
+    name: 'AirTower',
+    url: 'https://airtower.dev',
     description:
-      'No ambiguity. No surprises. An AI-native programming language where every construct is self-describing, parseable at a glance, and has defined semantics.',
+      'macOS menu-bar app for real-time git status, test/build tracking, and task monitoring. Built in SwiftUI.',
+  },
+  {
+    name: 'Chronicle',
+    url: 'https://github.com/PhilipLudington/Chronicle',
+    description:
+      'Zig CLI changelog generator with Claude Code skill integration. Zero dependencies, multi-format output.',
+  },
+  {
+    name: 'MCP-Unity',
+    url: 'https://github.com/CoderGamester/mcp-unity',
+    description:
+      'Model Context Protocol server for Unity Editor. Lets AI assistants manipulate scenes, components, and tests via natural language.',
+  },
+  {
+    name: 'Carbide',
+    url: 'https://github.com/PhilipLudington/Carbide',
+    description:
+      'Hardened C/C++ coding standards and clang-tidy rules for safe AI-assisted code generation.',
   },
   {
     name: 'Kira',
     url: 'https://github.com/PhilipLudington/Kira',
     description:
-      'A functional programming language with explicit types, explicit effects, and no surprises. Designed for clarity, predictability, and AI code generation.',
+      'A functional programming language with explicit types and tracked effects. Designed for clarity, predictability, and AI code generation.',
+  },
+  {
+    name: 'GameLegend.com',
+    url: 'https://gamelegend.com',
+    description:
+      'Cross-platform game discovery engine powered by "Gameplay DNA" — 9 categories and 69 dimensions that go beyond genre labels. Ships with a published MCP server.',
+  },
+  {
+    name: 'SkillShelf',
+    url: 'https://skillshelf.dev',
+    description:
+      'Curated directory of Claude Code skills, MCP servers, and the broader AI agent ecosystem.',
+  },
+  {
+    name: 'SheetSmith',
+    url: 'https://sheetsmith.dev',
+    description:
+      'Your spreadsheet deserves to be an app. Upload your data, answer AI-guided questions, and get a custom web application — no code required.',
+  },
+  {
+    name: 'Stellar Throne',
+    url: 'https://stellarthrone.games',
+    description:
+      '4X strategy game built with Godot + Zig. Early-access prototype exploring systemic diplomacy and emergent gameplay.',
   },
 ]
 
 const experience = [
   {
-    role: 'Founder',
-    org: 'Changesmith.dev',
-    period: 'Dec 2025 — Present',
-    bullets: [
-      'Building AI-powered changelog automation that turns messy commit histories into polished release notes',
-      'Solo-founded and built with Next.js, TypeScript, and Claude API',
-    ],
-  },
-  {
-    role: 'Game Director',
-    org: 'Mr. Phil Games',
+    role: 'Independent AI Tools Builder',
+    org: 'Self-employed · Austin, TX',
     period: 'Dec 2024 — Present',
     bullets: [
-      'Directing two original indie titles: Crimson Crisis (sci-fi co-op roguelike) and Stellar Throne (4X strategy, Godot 4.4 + Zig)',
-      'Pioneering "Agentic Game Development" — integrating AI-assisted workflows with human creative direction',
+      'Shipping AI-native developer tools at startup speed. 7+ live products in 16 months across AI developer tooling, curated directories, and AI-enabled games.',
+      'Products: Changesmith (changelog SaaS), MCPAtlas (MCP server registry), Klar (AI-native programming language with its own compiler), AIDevTools + AgenticGameDevelopment (curated directories, 150+ tools), SheetSmith (spreadsheet-to-app AI), Deep Hollow (AI-partner survival game on Next.js + Solana).',
+      'Stack: Native to Claude Code, MCP, and AI agents. Next.js, Astro, TypeScript, Zig, Drizzle, Neon, Stripe, Solana. Most products solo-founded and shipped in 2–6 weeks.',
     ],
   },
   {
@@ -144,33 +193,46 @@ const education = [
 const skills = [
   'TypeScript',
   'C#',
-  'Unity',
-  'Godot',
-  'Claude Code',
-  'AI/LLM Integration',
-  'C/C++',
   'JavaScript',
-  'React',
+  'C/C++',
+  'Zig',
+  'Node.js',
+  'Claude Code',
+  'Model Context Protocol (MCP)',
+  'Anthropic API',
+  'AI Agents',
+  'AI/LLM Integration',
   'Next.js',
   'Astro',
-  'Node.js',
-  'Zig',
-  'Git',
-  'ASP.NET',
-  'SQL Server',
-  'AWS',
+  'React',
+  'Tailwind',
+  'Vercel',
+  'Drizzle',
+  'PostgreSQL',
+  'Stripe',
+  'Solana',
+  'Unity',
+  'Godot',
   'iOS & Android',
+  'AWS',
+  'Git',
 ]
 ---
 
 <Layout>
   <!-- Hero -->
-  <section class="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
+  <section class="flex flex-col items-center px-6 pb-12 pt-20 text-center">
     <h1 class="text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
       Philip Ludington
     </h1>
-    <p class="mt-4 max-w-xl text-xl text-slate-600">
-      Game Developer &amp; AI Tools Creator. Building games and developer tools with AI.
+    <p class="mt-4 max-w-2xl text-xl text-slate-600">
+      I ship AI-native developer tools.
+    </p>
+    <p class="mt-2 max-w-2xl text-base text-slate-500">
+      25+ years of software engineering. Claude Code, MCP, and agents native.
+    </p>
+    <p class="mt-4 inline-flex items-center rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700 ring-1 ring-emerald-200">
+      Available for fractional, contract, or full-time engagements
     </p>
     <div class="mt-8 flex gap-4">
       <a
@@ -189,17 +251,26 @@ const skills = [
   </section>
 
   <!-- About -->
-  <section id="about" class="mx-auto max-w-3xl px-6 py-24">
+  <section id="about" class="mx-auto max-w-3xl px-6 pb-24 pt-12">
     <h2 class="text-3xl font-bold text-slate-900">About</h2>
     <div class="mt-6 space-y-4 text-lg leading-relaxed text-slate-600">
       <p>
-        I'm a software engineer with 25+ years of experience spanning game development, AI-powered
-        developer tools, enterprise software, and government systems. I've shipped casino games at
-        Zynga, IGT, and Ainsworth, directed indie titles at Mr. Phil Games, and founded Changesmith.dev.
+        Software engineer building AI-native developer tools. Past year's output:
+        <strong>Changesmith</strong> (changelog SaaS), <strong>MCPAtlas</strong> (curated MCP server
+        registry, 52 servers indexed), <strong>Klar</strong> (a programming language with its own
+        compiler, designed for AI-assisted development), two curated AI-tool directories totaling
+        150+ tools (<strong>AIDevTools</strong> + <strong>AgenticGameDevelopment</strong>), and
+        <strong>Deep Hollow</strong> (Next.js + Solana AI-partner survival game).
       </p>
       <p>
-        I believe in what I call Agentic Development — integrating AI-assisted workflows with human
-        creative direction to let small teams build with the efficiency of a studio. Based in Austin, TX.
+        Before going independent, 25+ years of production software at companies including Zynga,
+        IGT, SAP, and U.S. Army contractors. Native to Claude Code, MCP, and agent stacks. New
+        products ship every 4–8 weeks. Based in Austin, TX.
+      </p>
+      <p class="border-l-4 border-emerald-300 bg-emerald-50/50 px-4 py-3 text-base">
+        <strong class="text-slate-900">Currently available</strong> for fractional, contract, or
+        full-time roles at AI-native developer tools companies. Side projects continue in parallel
+        with explicit agreement.
       </p>
     </div>
   </section>
@@ -207,9 +278,9 @@ const skills = [
   <!-- Projects -->
   <section id="projects" class="bg-slate-50 px-6 py-24">
     <div class="mx-auto max-w-5xl">
-      <h2 class="text-3xl font-bold text-slate-900">Projects</h2>
+      <h2 class="text-3xl font-bold text-slate-900">Featured Work</h2>
       <div class="mt-10 grid gap-6 sm:grid-cols-2">
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <a
             href={project.url}
             target="_blank"
@@ -223,6 +294,26 @@ const skills = [
               </span>
             </h3>
             <p class="mt-2 text-slate-600">{project.description}</p>
+          </a>
+        ))}
+      </div>
+
+      <h2 class="mt-20 text-2xl font-bold text-slate-900">More Projects</h2>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {moreProjects.map((project) => (
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-lg border border-slate-200 bg-white p-5 transition hover:border-slate-300 hover:shadow-sm"
+          >
+            <h3 class="text-base font-semibold text-slate-900 group-hover:text-slate-700">
+              {project.name}
+              <span class="ml-1 inline-block text-slate-400 transition group-hover:translate-x-0.5">
+                &rarr;
+              </span>
+            </h3>
+            <p class="mt-2 text-sm text-slate-600">{project.description}</p>
           </a>
         ))}
       </div>
@@ -283,7 +374,8 @@ const skills = [
     <div class="mx-auto max-w-3xl text-center">
       <h2 class="text-3xl font-bold text-slate-900">Get in Touch</h2>
       <p class="mt-4 text-lg text-slate-600">
-        Interested in working together? I'd love to hear from you.
+        Currently available for fractional, contract, or full-time roles at AI-native developer tools
+        companies. Side projects continue in parallel.
       </p>
       <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <a
