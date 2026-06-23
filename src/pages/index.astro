@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro'
 
 const featuredProjects = [
   {
-    name: 'Changesmith.dev',
+    name: 'Changesmith',
     url: 'https://changesmith.dev',
     description:
-      'Turn your git history into polished release notes. AI-powered changelog generation that analyzes commits, PRs, and issues to create documentation customers actually want to read.',
+      'A SaaS I designed and built that turns git history into structured, human-readable release notes. TypeScript/Next.js with a Hono API, queue-backed workers, Postgres, and Claude via the Anthropic SDK. Engineered the analysis prompt to normalize jargon and prevent leakage of sensitive details. Live as a portfolio demo — explore the product tour and a live changelog; backend paused.',
   },
   {
     name: 'MCPAtlas',
@@ -19,12 +19,6 @@ const featuredProjects = [
     url: 'https://github.com/PhilipLudington/Klar',
     description:
       'No ambiguity. No surprises. An AI-native programming language with its own compiler written in Zig. Every construct is self-describing, parseable at a glance, and has defined semantics.',
-  },
-  {
-    name: 'AgenticGameDevelopment',
-    url: 'https://agenticgamedevelopment.com',
-    description:
-      'Curated directory of 89+ AI tools for game development, organized by a 6-stage dev workflow — from AI art generators to AI NPCs, procedural generation, and launch tools.',
   },
   {
     name: 'Deep Hollow',
@@ -99,13 +93,13 @@ const moreProjects = [
 
 const experience = [
   {
-    role: 'Independent AI Tools Builder',
+    role: 'Independent Software Engineer',
     org: 'Self-employed · Austin, TX',
     period: 'Dec 2024 — Present',
     bullets: [
-      'Shipping AI-native developer tools at startup speed. 7+ live products in 16 months across AI developer tooling, curated directories, and AI-enabled games.',
-      'Products: Changesmith (changelog SaaS), MCPAtlas (MCP server registry), Klar (AI-native programming language with its own compiler), AIDevTools + AgenticGameDevelopment (curated directories, 150+ tools), SheetSmith (spreadsheet-to-app AI), Deep Hollow (AI-partner survival game on Next.js + Solana).',
-      'Stack: Native to Claude Code, MCP, and AI agents. Next.js, Astro, TypeScript, Zig, Drizzle, Neon, Stripe, Solana. Most products solo-founded and shipped in 2–6 weeks.',
+      'Building AI-native developer tools and AI-assisted software as an independent engineer.',
+      'Recent builds: Changesmith (AI changelog tool), MCPAtlas (MCP server registry), Klar (AI-native language with its own compiler in Zig), and Stellar Throne (turn-based strategy simulation).',
+      'Developed a repeatable agentic-engineering workflow — design docs, phased delivery with verification gates, and continuous code review — to keep coding-agent output correct and low-debt. Stack: Claude Code, MCP, Anthropic SDK, TypeScript, Next.js, Astro, Zig.',
     ],
   },
   {
@@ -113,7 +107,7 @@ const experience = [
     org: 'Ainsworth Game Technology',
     period: 'Oct 2023 — Nov 2024',
     bullets: [
-      'Built high-performance gaming software and innovative slot and casino products for global markets',
+      'Sole engineer on Atomic Gold, a Unity slot title built on an immature proprietary SDK — owned the bonus games, free-spin system, slot-math integration, on-reel animations, and performance work, fixing SDK-level bugs and engineering workarounds.',
     ],
   },
   {
@@ -138,8 +132,8 @@ const experience = [
     org: 'Zynga',
     period: 'Jul 2015 — Jun 2018',
     bullets: [
-      'Gameplay, feature, and infrastructure development for the slots division — Hit It Rich, Spin It Rich, Black Diamond Casino',
-      'Built CI pipelines for iOS, Android, macOS, and Windows along with internal testing harness',
+      'Solo-migrated an acquired product\'s brittle legacy build system onto corporate Jenkins, and built the first automated harness to validate slot RTP (Return to Player) math across 5+ titles in the Black Diamond Casino product — replacing a slow, manual process.',
+      'Acted as a de facto technical lead for a 7-engineer frontend team: code reviews, engineering best practices, and coaching estimation accuracy. Gameplay and feature work across Hit It Rich, Spin It Rich, and Black Diamond Casino.',
     ],
   },
   {
@@ -181,12 +175,7 @@ const education = [
   {
     school: 'University of Maryland at College Park',
     degree: 'B.S., Logistics, Materials, and Supply Chain Management',
-    period: '1991 — 1998',
-  },
-  {
-    school: 'Mississippi School for Mathematics and Science',
-    degree: 'Diploma, Computers',
-    period: '1989 — 1991',
+    period: '',
   },
 ]
 
@@ -226,13 +215,11 @@ const skills = [
       Philip Ludington
     </h1>
     <p class="mt-4 max-w-2xl text-xl text-slate-600">
-      I ship AI-native developer tools.
+      Senior software engineer building developer tooling and reliable AI-assisted software.
     </p>
     <p class="mt-2 max-w-2xl text-base text-slate-500">
-      25+ years of software engineering. Claude Code, MCP, and agents native.
-    </p>
-    <p class="mt-4 inline-flex items-center rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700 ring-1 ring-emerald-200">
-      Available for fractional, contract, or full-time engagements
+      I've owned the systems other engineers depend on — build pipelines, test automation, and
+      live game and simulation features — and I bring that discipline to building with coding agents.
     </p>
     <div class="mt-8 flex gap-4">
       <a
@@ -255,22 +242,44 @@ const skills = [
     <h2 class="text-3xl font-bold text-slate-900">About</h2>
     <div class="mt-6 space-y-4 text-lg leading-relaxed text-slate-600">
       <p>
-        Software engineer building AI-native developer tools. Past year's output:
-        <strong>Changesmith</strong> (changelog SaaS), <strong>MCPAtlas</strong> (curated MCP server
-        registry, 52 servers indexed), <strong>Klar</strong> (a programming language with its own
-        compiler, designed for AI-assisted development), two curated AI-tool directories totaling
-        150+ tools (<strong>AIDevTools</strong> + <strong>AgenticGameDevelopment</strong>), and
-        <strong>Deep Hollow</strong> (Next.js + Solana AI-partner survival game).
+        I build developer infrastructure and reliable AI-assisted software. I've owned the
+        unglamorous systems other engineers depend on — CI/CD pipelines, automated test harnesses,
+        data pipelines, and live game and simulation features.
       </p>
       <p>
-        Before going independent, 25+ years of production software at companies including Zynga,
-        IGT, SAP, and U.S. Army contractors. Native to Claude Code, MCP, and agent stacks. New
-        products ship every 4–8 weeks. Based in Austin, TX.
+        At Zynga I migrated a brittle legacy build system onto corporate Jenkins single-handed and
+        built the first automated harness to validate slot RTP (Return to Player) math across 5+
+        titles, and acted as a de facto technical lead for a 7-engineer team. Earlier work spans
+        IGT, enterprise software, and U.S. Army contractor systems.
       </p>
-      <p class="border-l-4 border-emerald-300 bg-emerald-50/50 px-4 py-3 text-base">
-        <strong class="text-slate-900">Currently available</strong> for fractional, contract, or
-        full-time roles at AI-native developer tools companies. Side projects continue in parallel
-        with explicit agreement.
+      <p>
+        Today I build with coding agents the way a senior engineer should — design docs, phased
+        delivery with verification gates, continuous review, and multi-model debugging — to keep
+        agent output correct, not just fast. Recent independent builds include
+        <strong>Changesmith</strong> (an AI tool that turns git history into release notes),
+        <strong>MCPAtlas</strong> (a Model Context Protocol server registry), and
+        <strong>Klar</strong> (an AI-native language with its own compiler in Zig). Based in Austin, TX.
+      </p>
+    </div>
+  </section>
+
+  <!-- How I work with coding agents -->
+  <section id="workflow" class="mx-auto max-w-3xl px-6 pb-24">
+    <h2 class="text-3xl font-bold text-slate-900">How I work with coding agents</h2>
+    <div class="mt-6 space-y-4 text-lg leading-relaxed text-slate-600">
+      <p>
+        I treat agents like capable but fallible engineers, not magic. Pin down the concept in
+        conversation, capture it in a design doc and a phased plan, then drive the agent one phase
+        at a time with gates that prove each phase is correct before moving on. Review the code
+        continuously to keep tech debt down. When a problem gets stubborn, switch the agent's
+        persona, stage cross-model debates, and feed in my own hunches to break the deadlock.
+      </p>
+      <p>
+        A recent example: in my strategy game <strong>Stellar Throne</strong>, every unit test for
+        a residual-damage mechanic passed, but the behavior was wrong in real play. The damage was
+        stored as a fractional carry and masked by rounding in both the turn processor and the UI.
+        The tests were green; the behavior wasn't. Trusting play over the checkmarks — and my own
+        hunch — is what found it.
       </p>
     </div>
   </section>
@@ -374,8 +383,8 @@ const skills = [
     <div class="mx-auto max-w-3xl text-center">
       <h2 class="text-3xl font-bold text-slate-900">Get in Touch</h2>
       <p class="mt-4 text-lg text-slate-600">
-        Currently available for fractional, contract, or full-time roles at AI-native developer tools
-        companies. Side projects continue in parallel.
+        I'm interested in senior software engineering roles in developer tooling, AI-assisted
+        engineering, and production systems. Let's talk.
       </p>
       <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <a
