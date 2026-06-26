@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const caseStudies = [
+  {
+    name: 'Changesmith',
+    outcome: 'A production SaaS, shipped solo',
+    url: 'https://changesmith.dev',
+    description:
+      'The full surface of a funded startup — a four-app monorepo (web, API, worker, npm CLI), Stripe billing, GitHub App OAuth, CI/CD, and AI generation — designed, built, and deployed by one engineer.',
+  },
+  {
+    name: 'Klar',
+    outcome: 'A compiled programming language, 109K lines, solo',
+    url: 'https://klarlang.dev',
+    description:
+      'Three backends (LLVM native at 259x over the VM), generics, a trait system, an LSP server, and a self-hosting frontend — 378 native tests across four platforms. The strongest counter to "AI only helps with boilerplate."',
+  },
+  {
+    name: 'GameLegend',
+    outcome: 'A platform-scale consumer product, solo',
+    url: 'https://gamelegend.com',
+    description:
+      'A 69-dimension recommendation engine, a public rate-limited REST API, a published MCP server for AI agents, and a 5-tier community moderation system across 1,100+ titles — four subsystems a team would split, owned by one person.',
+  },
+  {
+    name: 'MCPAtlas',
+    outcome: 'A self-maintaining registry, near-zero ops',
+    url: 'https://mcpatlas.dev',
+    description:
+      'A daily CI pipeline recomputes a composite quality score and rebuilds the entire site with zero database and near-zero hosting cost — designed so the system does the maintenance a human normally would.',
+  },
+]
+
+const writing = [
+  {
+    title: 'Building a Programming Language for AI to Write',
+    url: 'https://mrphilgames.com/blog/building-a-programming-language-for-ai-to-write',
+  },
+  {
+    title: 'Building an AI That Runs Your Game While You Sleep',
+    url: 'https://mrphilgames.com/blog/building-an-ai-that-runs-your-game-while-you-sleep',
+  },
+  {
+    title: 'CLAUDE.md for Game Devs: The File That Makes AI Actually Understand Your Game',
+    url: 'https://mrphilgames.com/blog/claude-md-for-game-devs',
+  },
+  {
+    title: "$2 Robot Labor and Jevons' Paradox: The Indie Game Explosion Nobody's Ready For",
+    url: 'https://mrphilgames.com/blog/2-dollar-robot-labor-jevons-paradox-indie-game-explosion',
+  },
+]
+---
+
+<Layout
+  title="Hire Philip Ludington — AI-Accelerated Senior Engineer"
+  description="Senior software engineer (25+ years) who runs AI in production to ship complete, production-grade systems 2–3x faster — solo, at a scope that normally needs a team. Available for senior contract engineering."
+>
+  <!-- Hero -->
+  <section class="flex flex-col items-center px-6 pb-12 pt-20 text-center">
+    <p class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">
+      Senior contract engineering
+    </p>
+    <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+      AI-Accelerated Senior Engineer
+    </h1>
+    <p class="mt-6 max-w-2xl text-xl text-slate-600">
+      A senior engineer (25+ years) who runs AI in production to ship complete, production-grade
+      systems <strong>2–3x faster</strong> — solo, at a scope that normally needs a team.
+    </p>
+    <p class="mt-3 max-w-2xl text-base text-slate-500">
+      Give me work you've already scoped and I deliver senior engineering capacity on a compressed
+      timeline — not a prototype, a shipped product: tested, deployed, documented, in production.
+    </p>
+    <div class="mt-8 flex gap-4">
+      <a
+        href="mailto:philip@philipludington.com?subject=Contract%20engineering"
+        class="rounded-lg bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-700"
+      >
+        Start a conversation
+      </a>
+      <a
+        href="#proof"
+        class="rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-50"
+      >
+        See the proof
+      </a>
+    </div>
+  </section>
+
+  <!-- The edge -->
+  <section class="mx-auto max-w-3xl px-6 pb-24 pt-12">
+    <h2 class="text-3xl font-bold text-slate-900">
+      Different from "a contractor who uses Copilot"
+    </h2>
+    <div class="mt-6 space-y-4 text-lg leading-relaxed text-slate-600">
+      <p>
+        The market is full of juniors with AI and seniors without it. The scarce profile is a senior
+        engineer who has <em>operationalized</em> AI — who knows where it accelerates, where it lies,
+        and how to keep quality high while moving fast. That's a 25-year engineer driving the AI, not
+        the reverse.
+      </p>
+      <p>
+        The proof isn't a claim. It's a set of complete, production-grade systems I designed, built,
+        and deployed solo — each at a scope a small team would normally own. If AI-accelerated
+        engineering can build a working compiler and a billable SaaS, it can build your product.
+      </p>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section id="proof" class="bg-slate-50 px-6 py-24">
+    <div class="mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold text-slate-900">Proof — four systems, shipped solo</h2>
+      <p class="mt-3 max-w-2xl text-slate-600">
+        Each designed, built, and deployed end-to-end by one engineer.
+      </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2">
+        {caseStudies.map((c) => (
+          <a
+            href={c.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-xl border border-slate-200 bg-white p-6 transition hover:border-slate-300 hover:shadow-md"
+          >
+            <p class="text-sm font-semibold uppercase tracking-wide text-slate-500">{c.outcome}</p>
+            <h3 class="mt-1 text-xl font-semibold text-slate-900 group-hover:text-slate-700">
+              {c.name}
+              <span class="ml-1 inline-block text-slate-400 transition group-hover:translate-x-0.5">
+                &rarr;
+              </span>
+            </h3>
+            <p class="mt-2 text-slate-600">{c.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How to engage -->
+  <section class="mx-auto max-w-3xl px-6 py-24">
+    <h2 class="text-3xl font-bold text-slate-900">How to engage</h2>
+    <div class="mt-10 space-y-6">
+      <div class="rounded-xl border border-slate-200 bg-white p-6">
+        <h3 class="text-xl font-semibold text-slate-900">Senior engineering capacity</h3>
+        <p class="mt-2 text-slate-600">
+          Drop me into work you've already scoped and sold. I supply the build; you keep the client
+          relationship. Best for agencies and teams that need senior delivery hours on a compressed
+          timeline.
+        </p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-6">
+        <h3 class="text-xl font-semibold text-slate-900">
+          AI-adoption sprint
+          <span class="ml-2 align-middle text-xs font-medium uppercase tracking-wide text-slate-400">
+            secondary
+          </span>
+        </h3>
+        <p class="mt-2 text-slate-600">
+          A fixed-scope engagement to stand up AI-assisted development in your team and prove the
+          speedup on real work — a low-risk way to start a relationship.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing as proof of process -->
+  <section class="bg-slate-50 px-6 py-24">
+    <div class="mx-auto max-w-3xl">
+      <h2 class="text-3xl font-bold text-slate-900">How I actually work with AI</h2>
+      <p class="mt-3 text-slate-600">
+        The method, written up in the open — design docs, phased delivery with verification gates,
+        continuous review, and multi-model debugging to keep agent output correct, not just fast.
+      </p>
+      <ul class="mt-8 space-y-3">
+        {writing.map((w) => (
+          <li>
+            <a
+              href={w.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-baseline gap-2 text-lg text-slate-700 transition hover:text-slate-900"
+            >
+              <span class="font-medium group-hover:underline">{w.title}</span>
+              <span class="text-slate-400 transition group-hover:translate-x-0.5">&rarr;</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="px-6 py-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-slate-900">Let's talk</h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Tell me what you've got in the pipeline. If it's a fit, I can move quickly.
+      </p>
+      <div class="mt-8 flex justify-center">
+        <a
+          href="mailto:philip@philipludington.com?subject=Contract%20engineering"
+          class="rounded-lg bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-700"
+        >
+          philip@philipludington.com
+        </a>
+      </div>
+      <div class="mt-6 flex justify-center gap-6 text-slate-500">
+        <a
+          href="https://github.com/PhilipLudington"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition hover:text-slate-800"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/philipludington"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition hover:text-slate-800"
+        >
+          LinkedIn
+        </a>
+        <a href="/" class="transition hover:text-slate-800">Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 py-8 text-center text-sm text-slate-400">
+    &copy; {new Date().getFullYear()} Philip Ludington
+  </footer>
+</Layout>
