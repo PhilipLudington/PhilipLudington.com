@@ -46,9 +46,17 @@ Professional one-page portfolio and resume site — the canonical "who is Philip
 - **Fast** — static site, no JS bloat, sub-second load times
 - **Accessible** — semantic HTML, good contrast, screen-reader friendly
 
+## Writing
+
+A small, curated blog lives at `/blog` (Astro content collection, markdown in `src/content/blog/`).
+This is deliberately *not* a general dev-log — MrPhilGames.com still owns game dev and frequent posting.
+PhilipLudington.com carries a few high-signal, evergreen pieces on engineering craft and working with
+coding agents — the kind of writing a potential client or employer reads to answer "does this person
+know what they're doing?" Each post is intentional, like everything else on the site.
+
 ## What It Doesn't Do
 
-- Not a blog — that lives at MrPhilGames.com
+- Not a high-frequency dev blog — that cadence lives at MrPhilGames.com; here it's a few evergreen pieces
 - Not an app showcase with live demos — just curated descriptions and links
 - Not auto-updating — every change is intentional
 - Not a freelance marketplace profile — it's owned real estate
